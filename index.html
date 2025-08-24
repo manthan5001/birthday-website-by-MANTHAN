@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Eshuu ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+   :root{
+  --bg1: #ffdde1;
+  --bg2: #ee9ca7;
+  --text: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  --max-width: 1100px;
+}
+
+html,body { margin:0; padding:0; height:100%; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+/* LEFT TEXT */
+.text-section {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  padding-left: 20px;
+}
+.text-section h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  margin: 0 0 10px;
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+.text-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* RIGHT SLIDESHOW */
+.slideshow {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  height: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7); /* same as page */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+.slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* full photo visible */
+  object-position: center;  
+  background: transparent;   /* no black background */
+  opacity: 0;
+  transition: opacity .9s ease, transform .9s ease;
+  transform: scale(1.03);
+}
+.slideshow img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .container { flex-direction: column; padding: 18px; gap: 18px; }
+  .text-section { text-align: center; padding-left: 0; }
+  .slideshow { width: 100%; height: 320px; }
+  .text-section h1 { font-size: 2.4rem; }
+  .text-section p { font-size: 1rem; }
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* soft pink → peach */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* slideshow ke liye bhi same love theme background */
+.slideshow {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* same as page */
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  height: 420px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<body>
+  <title>HAPPY BIRTHDAY ESHUU🐼</title>
+  <div class="container">
+    <!-- LEFT PARAGRAPH -->
+    <div class="text-section">
+      <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">HAPPY BIRTHDAY ESHUU🐼</h2>
+      <p>
+        Finally Aaj Uska Birthday Hai ❤️<br>
+        Jo Mare Liya Bahut Special Hai✨<br>
+        Happy Birthday My Pasandida Aurat (CID)!❤️My love 💕
+      </p>
+    </div>
+
+    <!-- RIGHT SLIDESHOW -->
+    <div class="slideshow">
+     <img src="img1 (2).jpg" alt="Photo 1" class="active">
+      <img src="img2.jpg" alt="Photo 2">
+      <img src="img3.jpg" alt="Photo 3">
+      <img src="img4.jpg" alt="Photo 4">
+    </div>
+  </div>
+</body>
+
+
+  <!-- Slideshow Script -->
+  <script>
+    let slides = document.querySelectorAll('.slideshow img');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000); // 3 sec per photo
+  </script>
+
+  <!-- Confetti (modern celebration) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function fireworkEffect() {
+      var duration = 5 * 1000;
+      var animationEnd = Date.now() + duration;
+      (function frame() {
+        confetti({
+          particleCount: 4,
+          angle: 60,
+          spread: 75,
+          origin: { x: 0 },
+          colors: ['#ff2e63', '#08d9d6', '#fcbf49', '#6a2c70']
+        });
+        confetti({
+          particleCount: 4,
+          angle: 120,
+          spread: 75,
+          origin: { x: 1 },
+          colors: ['#ff2e63', '#08d9d6', '#fcbf49', '#6a2c70']
+        });
+        if (Date.now() < animationEnd) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    }
+    window.addEventListener("load", fireworkEffect);
+  </script>
+</body>
+</html>
